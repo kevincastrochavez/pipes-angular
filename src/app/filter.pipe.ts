@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
   name: "filter",
+  pure: false, // Pipe recalculates when something changes on the page
 })
 export class FilterPipe implements PipeTransform {
   transform(value: any, filterString: string, propName: string) {
